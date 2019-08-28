@@ -1,0 +1,92 @@
+/* Color palatte from https://palx.jxnblk.com */
+
+:root {
+    --bg-color: #ffffff;
+    --fg-color: #374047;
+    --highlight-color: rgb(153, 102, 224, 0.2);
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12pt;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    font-family: system-ui;
+    font-weight: 300;
+    line-height: 1.25;
+    margin: auto;
+}
+
+#wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+.button {
+    bottom: 1rem;
+    color: var(--fg-color);
+    cursor: pointer;
+    display: block;
+    font-size: 4rem;
+    position: fixed;
+    text-align: center;
+}
+
+#toggle-theme {
+    left: 1rem;
+}
+
+#reset-game {
+    right: 1rem;
+}
+
+#board {
+    height: 32rem;
+    width: 32rem;
+}
+
+#board td {
+    font-size: 6.5rem;
+    height: 33.333%;
+    padding: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    width: 33.333%;
+}
+
+#board td:hover {
+    background-color: var(--highlight-color);
+    cursor: pointer;
+}
+
+/* Horizontal lines */
+
+#board tr:nth-child(2) {
+    border-bottom: 8px solid var(--fg-color);
+    border-top: 8px solid var(--fg-color);
+}
+
+/* Vertical lines */
+
+#board td:nth-child(2) {
+    border-left: 8px solid var(--fg-color);
+    border-right: 8px solid var(--fg-color);
+}
+
+/* Theme toggle */
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --highlight-color: rgba(74, 158, 218, 0.2);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ttt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- Reset default browser styles -->
+    <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Scripts -->
+    <script src="board.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body data-theme="light">
+    <div id="wrapper">
+        <table id="board">
+            <tr data-row="0">
+                <td data-col="0"></td>
+                <td data-col="1"></td>
+                <td data-col="2"></td>
+            </tr>
+            <tr data-row="1">
+                <td data-col="0"></td>
+                <td data-col="1"></td>
+                <td data-col="2"></td>
+            </tr>
+            <tr data-row="2">
+                <td data-col="0"></td>
+                <td data-col="1"></td>
+                <td data-col="2"></td>
+            </tr>
+        </table>
+        <!-- Buttons -->
+        <span id="toggle-theme" class="button" title="Toggle dark mode" onclick="toggleTheme()">☼</span>
+        <span id="reset-game" class="button" title="Reset game" onclick="board.reset()">↺</span>
+    </div>
+</body>
+
+</html>
